@@ -499,7 +499,7 @@ function initUI() {
     $('button#getToken').onclick = e => {
         window.dispatchEvent(new Event('beforeunload'));
         const ls = document.body.appendChild(document.createElement('iframe')).contentWindow.localStorage;
-        $('input#authToken').value = JSON.parse(localStorage.token);
+        $('input#authToken').value = JSON.parse(ls.token);
     };
     $('button#getAuthor').onclick = e => {
         $('input#authorId').value = JSON.parse(localStorage.user_id_cache);
